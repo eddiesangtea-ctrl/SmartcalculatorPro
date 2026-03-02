@@ -1,0 +1,55 @@
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#1e3c72,#2a5298);
+color:white;
+text-align:center;
+margin:0;
+}
+
+h1{
+padding:15px;
+}
+
+.menu button{
+margin:5px;
+padding:10px;
+border:none;
+border-radius:8px;
+background:#00c6ff;
+color:white;
+font-weight:bold;
+}
+
+.page{
+display:none;
+padding:15px;
+}
+
+.active{
+display:block;
+}
+
+input{
+width:80%;
+padding:10px;
+margin:10px;
+font-size:18px;
+border-radius:8px;
+border:none;
+}
+
+.buttons{
+display:grid;
+grid-template-columns:repeat(4,70px);
+justify-content:center;
+gap:10px;
+}
+
+.buttons button{
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#ffffff22;
+color:white;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Calculator Pro</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<h1>Smart Calculator Pro</h1>
+
+<!-- Navigation -->
+<div class="menu">
+<button onclick="showPage('calc')">Calculator</button>
+<button onclick="showPage('money')">Money Counter</button>
+<button onclick="showPage('loan')">Loan</button>
+<button onclick="showPage('avg')">Average</button>
+</div>
+
+<!-- Calculator -->
+<div id="calc" class="page active">
+<input id="display" readonly>
+
+<div class="buttons">
+<button onclick="add('7')">7</button>
+<button onclick="add('8')">8</button>
+<button onclick="add('9')">9</button>
+<button onclick="add('/')">÷</button>
+
+<button onclick="add('4')">4</button>
+<button onclick="add('5')">5</button>
+<button onclick="add('6')">6</button>
+<button onclick="add('*')">X</button>
+
+<button onclick="add('1')">1</button>
+<button onclick="add('2')">2</button>
+<button onclick="add('3')">3</button>
+<button onclick="add('-')">-</button>
+
+<button onclick="add('0')">0</button>
+<button onclick="calculate()">=</button>
+<button onclick="clearDisplay()">C</button>
+<button onclick="add('+')">+</button>
+</div>
+</div>
+
+<!-- Money Counter -->
+<div id="money" class="page">
+<h2>Money Counter</h2>
+<input id="note" type="number" placeholder="Note Value">
+<input id="qty" type="number" placeholder="Quantity">
+<button onclick="countMoney()">Add</button>
+
+<h3>Total: ₹ <span id="totalMoney">0</span></h3>
+</div>
+
+<!-- Loan -->
+<div id="loan" class="page">
+<h2>Loan Calculator</h2>
+<input id="amount" placeholder="Loan Amount">
+<input id="rate" placeholder="Interest %">
+<input id="years" placeholder="Years">
+
+<button onclick="loanCalc()">Calculate</button>
+
+<p id="loanResult"></p>
+</div>
+
+<!-- Average -->
+<div id="avg" class="page">
+<h2>Average Calculator</h2>
+<input id="numbers" placeholder="Enter numbers (1,2,3)">
+<button onclick="averageCalc()">Find Average</button>
+<p id="avgResult"></p>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
